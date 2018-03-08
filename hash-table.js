@@ -59,6 +59,32 @@ HashTable.prototype.insert = function(key,value) {
   }
 };
 
+
+//searches the current HashTable and uses the key to find the desired node
 HashTable.prototype.get = function(key) {
-  let index = this.hash(key); //returns the index of this key with the hashing function 
+  let index = this.hash(key); //returns the index of this key with the hashing function
+  if(!this.buckets[index]) return null;
+  let currentNode = this.buckets[index];
+  while(currentNode) {
+    //we will traverse the linked list to find the node with the given key
+    if(currentNode.key === key) {
+      return currentNode.value;
+    }
+    currentNode = currentNode.next;
+  }
+  return null; //if the node isn't found - return null
+};
+
+//we must iterate through all the buckets and every node on the node train
+// to retrive all the nodes in the HashMap - we'll store all of them in an array
+HashTable.prototype.returnAll = function() {
+  let allNodes = [];
+  for(let i = 0; i < this.numBuckets; i++) {
+    let currentNode = this.buckets[i];
+    while(currentNode) {
+      allNodes.push(currentNode);
+      currentNode = currentNode.next;
+    }
+  }
+  return allNodes;
 };
