@@ -1,5 +1,8 @@
 //Hash Tables allow us to look-up and insert data in constant time or O(1)
 //Hash Tables can be a lot faster than trees or other data structures.
+// Worst case scenario is O(n).
+//At each index in the array is a linked-list of keys and values - this helps resolve collisions
+
 
 function HashTable(size) {
   // we can pass in the number of 'buckets' that we cant to create
@@ -29,10 +32,33 @@ HashTable.prototype.hash = function(key) {
   return bucketIndex;
 };
 
+//the insert function uses they key and value to create a new HashNode 0p\
 HashTable.prototype.insert = function(key,value) {
   let index = this.hash(key);
   //insert the key into the HashTable's hashing function
+  if(!this.buckets[index]) {
+    //if the bucket is empty, create a new Node at that index
+    this.buckets[index] = new HashNode(key,value);
+  } else if (this.buckets[index].key === key) {
+    //if the key already exists in the hashtable just update the value
+    this.buckets[index].value = value;
+  } else {
+    let currentNode = this.buckets[index];
+    while(currentNode.next !== null ) {
+      if(currentNode.next.key === key) {
+        //if key is encountered  - reassign value of key to the new value
+        currentNode.next.value = value;
+        return ;
+      }
+      // set currentNode equal to next node
+      currentNode = currentNode.next;
+    }
+    //when we find a node that is followed by null - then we add a new node with the
+    //current key and value to follow the current node
+    currentNode.next = new HashNode(key,value);
+  }
+};
 
-
-
+HashTable.prototype.get = function(key) {
+  let index = this.hash(key); //returns the index of this key with the hashing function 
 };
