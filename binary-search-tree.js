@@ -41,3 +41,8 @@ BST.prototype.contains = function(value) {
     else return this.right.contains(value);
   }
 };
+
+//Note: searching a binary search tree is also O(log n)
+BST.prototype.dfsTraversal = function(iteratorFunc,order) {
+
+};
