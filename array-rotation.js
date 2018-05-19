@@ -36,16 +36,26 @@ function main() {
   process.stdout.write(result.join(" ")); // uses standard output to return the result
 }
 
-//O(n) solution 
+//O(n) solution
 function getResult() {
   let arr = data.slice(0);
   let newArr;
 
   for (let i = 0; i < d; i++) {
     let first = arr.shift(1);
-    newArr = arr.slice(1,arr.length).concat(first);
+    newArr = arr.slice(0,arr.length).concat(first);
     arr = newArr;
   }
 
   return newArr;
+}
+
+//O(1)
+
+function getTwo() {
+  let shift = d % data.length;
+  let last = data.slice(0,shift);
+  let first = data.slice(shift);
+  // console.log(first.concat(last));
+  return first.concat(last);
 }
