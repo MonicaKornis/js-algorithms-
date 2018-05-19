@@ -39,7 +39,7 @@ function count(head, data) {
   let start = head;
   while(start !== null) {
     if(start.data === data) i ++;
-    start = start.next
+    start = start.next;
   }
   return i;
 }
