@@ -54,8 +54,7 @@ function getResult() {
 
 function getTwo() {
   let shift = d % data.length;
-  let last = data.slice(0,shift);
-  let first = data.slice(shift);
-  // console.log(first.concat(last));
+  let last = data.slice(0,shift); //O(n)
+  let first = data.slice(shift); // O(n)
   return first.concat(last);
 }
