@@ -1,65 +1,52 @@
 const json =
 {
   "first_name": "J",
-  "last_name": "Jones",
-  "email": "jane.smith@google.com",
+  "last_name": "Johnson",
+  "email": "jordan.smith@google.com",
   "gender": null,
-  "invitations": [
+  "invite": [
   {
   "from": "",
   "code": null
   }
   ],
   "company": {
-  "name": "Chicago",
-  "industries": []
+  "name": "Maine",
+  "industries": [{ data: { data: { data: [{data: [null]}]}}}]
   },
   "address": {
   "city": "New York",
   "state": null,
-  "zip": "10011",
+  "zip": "10027",
   "street": " "
   }
 };
 
 function removeEmpty(obj) {
   let newObj = obj;
-  for(let key in newObj) {
-    let value = newObj[key];
-    if(value === null) {
-      delete newObj[key];
-    } else if(empty(value) || emptyStr(value)) {
-      delete newObj[key];
-    } else if (value instanceof Object || value instanceof Array){
-      removeEmpty(value);
+
+  for (let i = 0; i < 2; i++) {
+    for(let key in newObj) {
+      let value = newObj[key];
+      if(value === null || empty(value) || emptyStr(value)) {
+        delete newObj[key];
+      } else if (typeof value === 'object'){
+        removeEmpty(value);
+      }
+    }
   }
-}
+
   if(!empty(newObj)) {
     return newObj;
   }
 }
 
 function emptyStr(str) {
-  if(typeof str === 'string') {
-    let string = str.split('');
-    if(string.every(el => el === ' ')) {
-      return true;
-    } else {
-      return false;
-    }
-  }
+  return typeof str === 'string' ? str.split('').every(el => el === ' ') : false;
 }
 
 function empty(obj) {
-  if(typeof obj === 'object') {
-    if (obj.length < 1 || Object.keys(obj).length < 1 ) {
-      return true;
-    }
-  } else {
-    return false;
-  }
+  if(obj instanceof Object) return Object.keys(obj).length < 1;
 }
 
-emptyStr('   ');
-emptyStr('');
 removeEmpty(json);

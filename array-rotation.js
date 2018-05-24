@@ -1,6 +1,6 @@
 let n = 0; //global variable for length of array
 let d = 0; // number of rotations
-let data = []; // global array to store the input string
+let dataArray = []; // global array to store the input string
 
 //read standard input
 process.stdin.setEncoding("utf8");
@@ -17,7 +17,7 @@ process.stdin.on("end", function() { //when input ends
   temp.map(Number); //changes all of the string of an array into numbers
   n = temp[0];
   d = temp[1];
-  data = linesOfInput[1].split(" ");
+  dataArray = linesOfInput[1].split(" ");
 
   main();
 });
@@ -54,7 +54,7 @@ function getResult() {
 
 function getTwo() {
   let shift = d % data.length;
-  let last = data.slice(0,shift); //O(n)
-  let first = data.slice(shift); // O(n)
-  return first.concat(last);
+  let first = data.slice(0,shift); //O(n)
+  let last = data.slice(shift); // O(n)
+  return last.concat(first);
 }
