@@ -36,9 +36,7 @@ function removeEmpty(obj) {
     }
   }
 
-  if(!empty(newObj)) {
-    return newObj;
-  }
+  if(!empty(newObj)) return newObj;
 }
 
 function emptyStr(str) {
