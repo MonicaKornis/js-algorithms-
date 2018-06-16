@@ -31,18 +31,65 @@ BST.prototype.insert = function(value) {
 //NOte: insertion in BSTs have a runtime of O(log n)
 
 BST.prototype.contains = function(value) {
-  if(this.value === value) return true;
+  if(this.value === value) {
+    console.log(true);
+    return true;
+  }
   // if we find the value return true - base case
   if(this.value > value) { //if the value is less than the root node
-    if (!this.value.left) return false; //return false if left side is empty
-    else return this.left.contains(value);
+
+    if (!this.value.left) {
+      console.log(false);
+      return false; //return false if left side is empty
+    } else {
+      return this.left.contains(value);
+    }
   } else if (this.value < value) { //if value is greater than root node - search right side
-    if (!this.value.right) return false;
-    else return this.right.contains(value);
+    if (!this.value.right) {
+        console.log(false);
+        return false;
+    } else {
+      return this.right.contains(value);
+    }
   }
 };
 
 //Note: searching a binary search tree is also O(log n)
-BST.prototype.dfsTraversal = function(iteratorFunc,order) {
+BST.prototype.dfsTraversal = function(iteratorFunc) {
 
+
+  function recurse(bst) {
+    if(bst === null ) {
+      return;
+    }
+    //
+    console.log(bst.value);
+//
+    iteratorFunc(bst.value);
+
+    if(bst.left !== null) {
+      recurse(bst.left);
+    }
+    if(bst.right !== null) {
+      recurse(bst.right);
+    }
+  }
+
+  recurse(this);
 };
+
+
+const pushOrderNodes = (value) => {
+  // console.log(value);
+  console.log('hi');
+};
+
+let tree = new BST(4);
+tree.insert(3);
+tree.insert(5);
+tree.insert(2);
+tree.insert(1);
+// tree.contains(4);
+// tree.contains(10);
+tree.dfsTraversal(pushOrderNodes);
+tree.dfsTraversal(pushOrderNodes);
