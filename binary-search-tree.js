@@ -63,7 +63,7 @@ BST.prototype.dfsTraversal = function(iteratorFunc) {
       return;
     }
     //
-    console.log(bst.value);
+    // console.log(bst.value);
 //
     iteratorFunc(bst.value);
 
