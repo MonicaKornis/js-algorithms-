@@ -1,15 +1,15 @@
-function bstChecker(root) {
-  return isValidBST(root, Infinity, -Infinity);
+function isValidBST(root) {
+  return checker(root, -Infinity, Infinity);
 }
 
-function isValidBST(node, max, min) {
+function checker(node, min, max) {
   if(node === null) {
     return true;
   }
 
-  if(node.val > max || node.min < min ) {
-    return false;
-  }
+  if(node.val <= min || node.val >= max){
+        return false;
+    }
 
-  return isValidBST(node.left,node.val,min) && isValidBST(node.right,max,node.val);
+  return isValidBST(node.left,min, node.val) && isValidBST(node.right,node.val, max);
 }
