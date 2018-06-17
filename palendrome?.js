@@ -1,4 +1,4 @@
-function isAPalendrome(string) {
+function palendromePermutation(string) {
   let letters = string.toLowerCase().split('').filter(letter => !' :+!@#$%^&*()'.includes(letter));
 
   let letterCounts = new Object;
@@ -11,7 +11,7 @@ function isAPalendrome(string) {
   }
 
   let counts = vals(letterCounts).map( num => num % 2 );
-  return counts.filter(num => num !== 0).length > 1 ? false : true;
+  return counts.filter(num => num !== 0).length > 1 ? false : console.log(true);
 
 }
 
@@ -24,4 +24,4 @@ var vals = (object) => {
   return arr;
 };
 
-isAPalendrome("A man, a plan, a canal: Panama");
+isAPalendrome("race a car");
