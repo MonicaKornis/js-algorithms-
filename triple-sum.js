@@ -9,7 +9,6 @@ function hasTriplet(array, sum ) {
     while(second < third) {
       let currentSum = first + array[second] + array[third];
       if(sum === currentSum) {
-        console.log(true);
         return true;
       } else if (currentSum < sum ) {
         second++;
@@ -18,7 +17,7 @@ function hasTriplet(array, sum ) {
       }
     }
   }
-  console.log(false);
+
   return false;
 }
 

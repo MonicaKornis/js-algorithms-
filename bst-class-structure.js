@@ -4,6 +4,7 @@ class BST {
     this.left = null;
     this.right = null;
     this.traverseDfs = this.traverseDfs.bind(this);
+    this.traverseBfs = this.traverseBfs.bind(this);
   }
 
   insert(value) {
@@ -42,15 +43,28 @@ class BST {
   traverseDfs() {
     function recurse(bst) {
       console.log(bst.value);
-      if(bst === null) {
-        return;
-      }
+
 
       if(bst.left) recurse(bst.left);
       if(bst.right) recurse(bst.right);
     }
 
     recurse(this);
+  }
+
+  traverseBfs(action = () => {}) {
+    let root = this;
+    let queue = [];
+
+    queue.push(root);
+
+    while(queue.length > 0 ) {
+      console.log(root.value);
+      if(root.left) queue.push(root.left);
+      if(root.right) queue.push(root.right);
+      queue.shift();
+      root = queue[0];
+    }
   }
 }
 
@@ -60,5 +74,6 @@ a.insert(1);
 a.insert(2);
 a.insert(39);
 a.contains(5);
-a.traverseDfs();
-console.log(a);
+// a.traverseDfs();
+a.traverseBfs();
+console.log('dsafd');
