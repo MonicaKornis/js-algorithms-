@@ -1,5 +1,5 @@
 function hasTriplet(array, sum ) {
-  array = array.sort();
+  array = array.sort((a, b) => a - b);
 
   for (var i = 0; i < array.length; i++) {
     let first = array[i];
@@ -20,5 +20,3 @@ function hasTriplet(array, sum ) {
 
   return false;
 }
-
-hasTriplet([1,7,3,9,4,1],23);

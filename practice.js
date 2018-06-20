@@ -10,18 +10,19 @@ function getResult() {
     newArr = arr.slice(0,arr.length).concat(first);
     arr = newArr;
   }
-  console.log(newArr);
+  // console.log(newArr);
   return newArr;
 }
 
 getResult();
 
-function getTwo() {
-  let shift = d % data.length;
-  let last = data.slice(0,shift);
-  let first = data.slice(shift);
+function getTwo(arr,rotations) {
+  let shift = rotations % arr.length;
+  let last = arr.slice(0,shift);
+  let first = arr.slice(shift);
   console.log(first.concat(last));
-  return last.concat(first);
+  return first.concat(last);
 }
 
-getTwo();
+getTwo(data,-1);
+let x = 1;

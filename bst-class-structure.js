@@ -8,7 +8,6 @@ class BST {
   }
 
   insert(value) {
-    // console.log(this.value);
     if(value <= this.value) {
       if(this.left === null) {
         this.left = new BST(value);
@@ -67,7 +66,7 @@ class BST {
     }
   }
 }
-
+//
 let a = new BST(3);
 a.insert(5);
 a.insert(1);
@@ -75,5 +74,13 @@ a.insert(2);
 a.insert(39);
 a.contains(5);
 // a.traverseDfs();
-a.traverseBfs();
+// a.traverseBfs();
 console.log('dsafd');
+
+function traverse(node) { //preorder
+  console.log(node.value);
+  if(node.left) traverse(node.left);
+  if(node.right) traverse(node.right);
+}
+
+traverse(a);
