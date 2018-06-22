@@ -11,12 +11,12 @@ function activitySelector(startTimes, finishTimes) {
     if(lastFinish <= nextStart) {
       taskTimes.push(i-1);
       taskTimes.push(i);
-    }
+    } 
 
     i++;
     lastFinish = finishTimes[i-1];
   }
-
+  console.log(taskTimes);
   return taskTimes;
 }
 
