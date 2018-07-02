@@ -67,11 +67,13 @@ class BST {
   }
 }
 //
-let a = new BST(3);
-a.insert(5);
-a.insert(1);
+let a = new BST(7);
+a.insert(4);
+a.insert(9);
 a.insert(2);
-a.insert(39);
+a.insert(5);
+a.insert(8);
+a.insert(10);
 a.contains(5);
 // a.traverseDfs();
 // a.traverseBfs();
