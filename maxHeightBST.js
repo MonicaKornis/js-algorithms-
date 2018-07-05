@@ -19,3 +19,11 @@ var maxDepth = function(root) {
     }
     return depth;
 };
+
+//we need some way to keep track of the node and it's current level
+//as well as the depth
+//our procedure should be similar to BFS exept that we push the current level of the node
+//into the stack as well
+//however the depth is kept tract of by the depth of the current node we are own
+//if our current node has children then we will push our the node and depth plus one onto the queue
+// the max depth is the depth of the deepst node which we keep track of with the ternary statement
