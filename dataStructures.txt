@@ -1,0 +1,9 @@
+Static Arrays - similar to regular arrays but without the push/pop methods. The only methods it has is Init (where we pass in a fixed length). It also has Get and Set methods.
+
+[_800_,_808_,_816_,_824_]- each of the places in the array has it's own space in memory. we can access each place in the array in Constant time. When you initialize a static array you're asking the operating system for X amount of memory. There is a physical address assigned to each of these cells. 8 bytes are in each cell.
+
+8 bytes = 64 bits
+
+So you have the address of the first index of the static array - we can access any index with the following:
+
+address + (index * 8) - shows us where we have to look in memory - both get and set operations are O(1)
