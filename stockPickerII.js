@@ -12,6 +12,15 @@
 //              Then buy on day 4 (price = 3) and sell on day 5 (price = 6), profit = 6-3 = 3.
 
 
+//think about interval
+// lets say you have an array - [1,3,6]
+// you want to capitalize on the numbers with the greatest difference
+// 1 and 6 create the largest difference - 5
+// but if you add [1,3]  - difference 2  and [3,6]-3 , you also get a difference of 5
+// another example: [1,12,10] - 12 - 1 = 11
+// so you dont need to worry about the difference between 1 and 10 because 12 is greater
+
+
 
 var maxProfit = function(prices) {
     let total = 0;

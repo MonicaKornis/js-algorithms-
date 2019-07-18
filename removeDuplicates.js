@@ -1,13 +1,13 @@
-var removeDuplicates = (arr) => {
-  for(let i = 0; i++; i < arr.length()) {
-    let curr = arr[i];
-    let next = i+1;
 
-    if(arr[curr] === arr[next]) {
-      arr.splice(i,1);
-      i = i-1;
-    }
+
+var removeDuplicates = function(nums) {
+  let i = 0;
+  while(i < nums.length) {
+      if (nums[i] === nums[i+1]) {
+          nums.splice(i,1);
+      } else  {
+          i++;
+      }
   }
-
-  arr.length;
+  return nums.length;
 };
