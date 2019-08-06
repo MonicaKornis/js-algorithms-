@@ -1,10 +1,8 @@
 var rotate = function(nums, k) {
-    let shift = k % nums.length;
-    let newBeg = nums.splice(nums.length-k,k);
+    let take = k % nums.length;
+    let beginning = nums.splice(-take);
 
-    for(let i =newBeg.length;i--;i>=0) {
-        nums.unshift(newBeg[i]);
+    for(let i = beginning.length;i--;i<=0) {
+        nums.unshift(beginning[i]);
     }
-
-    return nums;
-}
+};
