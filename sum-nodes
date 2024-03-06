@@ -1,1 +1,25 @@
+// class Node {
+//   constructor(val) {
+//     this.val = val;
+//     this.next = null;
+//   }
+// }
 
+const sumList = (head, sum = 0) => {
+  // todo
+  // let sum = 0; 
+  // return createSum(head, sum);
+  
+//   let sum = 0; 
+//   while(head !== null) {
+//     sum += head.val; 
+//     head = head.next
+//   }
+  
+//   return sum;
+  
+  if(head === null) return sum; 
+  sum += head.val
+  head = head.next
+  return sumList(head, sum)
+};
