@@ -6,7 +6,7 @@
 // }
 
 const sumList = (head, sum = 0) => {
-  // todo
+ // ---------------iterative solution below
   // let sum = 0; 
   // return createSum(head, sum);
   
@@ -17,6 +17,7 @@ const sumList = (head, sum = 0) => {
 //   }
   
 //   return sum;
+//---------------recursive solution below
   
   if(head === null) return sum; 
   sum += head.val
