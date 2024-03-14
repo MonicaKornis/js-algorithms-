@@ -24,27 +24,6 @@ var plusOne = function(digits) {
   }
 };
 
-// [9,9,9]
-// [9,10,0];
-// [10,0,0];
-//
-// [8,9,9]
-// [8,10,0]
-// [9,0,0]
-
-// [8,9,9]
-// [8,9,10]
-// [-,-,0]
-// add = 1
-// [8,9,9]
-// 10
-//
-// [-,0,0]
-// add = 1
-// 9,
-// 9
-
-
 //Slightly faster  solution
 var plusOne  = (digits) => {
   var result = [], add = 0, len = digits.length;
