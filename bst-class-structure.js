@@ -75,8 +75,6 @@ a.insert(5);
 a.insert(8);
 a.insert(10);
 a.contains(5);
-// a.traverseDfs();
-// a.traverseBfs();
 console.log('dsafd');
 
 function traverse(node) { //preorder
