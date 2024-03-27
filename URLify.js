@@ -31,7 +31,6 @@ function URLify(str) {
       }
     }
 
-    console.log(str);
     return str.join('');
   }
 
