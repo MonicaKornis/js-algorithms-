@@ -16,7 +16,7 @@ function activitySelector(startTimes, finishTimes) {
     i++;
     lastFinish = finishTimes[i-1];
   }
-  console.log(taskTimes);
+
   return taskTimes;
 }
 
