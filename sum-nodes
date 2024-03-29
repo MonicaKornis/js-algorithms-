@@ -18,8 +18,8 @@ let sum = 0;
    return sum;
 //---------------recursive solution below
   
-  if(head === null) return sum; 
-  sum += head.val
-  head = head.next
-  return sumList(head, sum)
+  //if(head === null) return sum; 
+ // sum += head.val
+ // head = head.next
+//  return sumList(head, sum)
 };
