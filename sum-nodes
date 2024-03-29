@@ -6,17 +6,16 @@
 // }
 
 const sumList = (head, sum = 0) => {
- // ---------------iterative solution below
-  // let sum = 0; 
-  // return createSum(head, sum);
+
+
   
-//   let sum = 0; 
-//   while(head !== null) {
-//     sum += head.val; 
-//     head = head.next
-//   }
+let sum = 0; 
+  while(head !== null) {
+  sum += head.val; 
+  head = head.next
+}
   
-//   return sum;
+   return sum;
 //---------------recursive solution below
   
   if(head === null) return sum; 
