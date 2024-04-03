@@ -12,7 +12,7 @@ function oneAway(string1,string2) {
       edited = true;
     }
   }
-  // console.log(true);
+
   return true;
 }
 
