@@ -1,6 +1,6 @@
 function URLify(str) {
   if (typeof str !== 'string' || str.length < 1) {
-      throw new TypeError('first argument must be a string or be a string with a length greater than zero');
+      throw new TypeError('first argument must be a string or be a string with a length greater than zero ');
     }
 
     let spacesCount = 0;
