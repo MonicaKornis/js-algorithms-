@@ -9,8 +9,6 @@
 // count(null, 1) === 0
 // count(1 -> 2 -> 3 -> null, 1) === 1
 // count(1 -> 1 -> 1 -> 2 -> 2 -> 2 -> 2 -> 3 -> 3 -> null, 2) === 4
-// I've decided to bundle these two functions within the same Kata since they are both very similar.
-//
 
 function Node(data) {
   this.data = data;
