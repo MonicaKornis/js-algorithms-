@@ -12,7 +12,7 @@ function myPromise() {
         });
 
       p1.then(function(val){
-        console.log(val + `: Promise fulfilled - async code terminated ${ new Date().getTime()}`);
+        console.log(val + `: Promise fulfilled - async code terminated at ${ new Date().getTime()}`);
       }).catch( error => {
       return console.log(`Handling reject promise: ${error}`);
       }
