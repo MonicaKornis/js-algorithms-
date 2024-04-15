@@ -29,7 +29,7 @@ function validParentheses1(parens){
 }
 
 
-/// BEST SOLUTION
+/// BEST
 function validParentheses(parens) {
   let count = 0;
   for (let i = 0; i < parens.length; i++) {
