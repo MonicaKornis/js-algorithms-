@@ -16,4 +16,4 @@ function oneAway(string1,string2) {
   return true;
 }
 
-oneAway('mooi','mooo');
+oneAway('moop','mooods');
