@@ -1,6 +1,6 @@
 let n = 0; //global variable for length of array
 let d = 0; // number of rotations
-let data = []; // global array to store the input string
+let data = []; // global array to store the input strings
 
 //read standard input
 process.stdin.setEncoding("utf8");
