@@ -28,7 +28,7 @@ BST.prototype.insert = function(value) {
     //else we will recursively call the insert method to find the appropriate place to insert the subtree
   }
 };
-//NOte: insertion in BSTs have a runtime of O(log n)
+//Note: insertion in BSTs have a runtime of O(log n)
 
 BST.prototype.contains = function(value) {
   if(this.value === value) {
