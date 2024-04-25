@@ -36,7 +36,7 @@ function main() {
   process.stdout.write(result.join(" ")); // uses standard output to return the result
 }
 
-//O(n) solution
+//Runtime - O(n) solution
 function getResult() {
   let arr = data.slice(0);
   let newArr;
