@@ -1,5 +1,5 @@
 // Sums Upon Sums
-// I give you a scrambled list of n unique integers between 0 and n. Tell me what number is missing.
+// Given a scrambled list of n unique integers between 0 and n, find what number is missing.
 //
 // A) Solve this problem in O(nlog(n)) time, O(n) space.
 //
