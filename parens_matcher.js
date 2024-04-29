@@ -1,4 +1,4 @@
-//FIRST SOLUTION
+//FIRST SOLUTION - 
 function validParentheses1(parens){
 
   const right = [];
