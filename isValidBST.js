@@ -1,4 +1,4 @@
-function isValidBST(root) {
+function isValidBinaraySearchTree(root) {
   return checker(root, -Infinity, Infinity);
 }
 
@@ -11,5 +11,5 @@ function checker(node, min, max) {
         return false;
     }
 
-  return isValidBST(node.left,min, node.val) && isValidBST(node.right,node.val, max);
+  return isValidBinaraySearchTree(node.left,min, node.val) && isValidBST(node.right,node.val, max);
 }
