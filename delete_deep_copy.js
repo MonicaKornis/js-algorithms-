@@ -18,7 +18,7 @@ const json =
   "city": "New York",
   "state": null,
   "zip": "10027",
-  "street": " "
+  "street": "  "
   }
 };
 
