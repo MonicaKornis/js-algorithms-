@@ -41,7 +41,6 @@ class BST {
 
   traverseDfs() {
     function recurse(bst) {
-      console.log(bst.value);
 
 
       if(bst.left) recurse(bst.left);
