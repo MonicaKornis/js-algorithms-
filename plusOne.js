@@ -24,7 +24,7 @@ var plusOne = function(digits) {
   }
 };
 
-//Slightly faster approach
+//Slightly faster solution
 var plusOne  = (digits) => {
   var result = [], add = 0, len = digits.length;
 
