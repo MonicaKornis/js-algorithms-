@@ -1,7 +1,7 @@
 // Sums Upon Sums
 // Given a scrambled list of n unique integers between 0 and n find what number is missing.
 //
-// A) Solve this problem in O(nlog(n)) time, O(n) space.
+// A) Solve this problem in O(nlog(n)) time, O(n) space
 //
 // B) Solve this problem in O(n) time, O(n) space.
 //
