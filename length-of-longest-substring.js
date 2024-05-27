@@ -11,7 +11,7 @@ function lengthOfLongestSubstring(s) {
     let c = s[i];
     if (Object.keys(lookup).includes(c) && lookup[c] >= start) {
       // console.log(lookup);
-      start = i + 1; // Read the logic in the notes above
+      start = i + 1; // Read the logic in the notes below
     }
 
     lookup[c] = i;
