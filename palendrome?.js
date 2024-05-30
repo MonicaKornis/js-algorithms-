@@ -24,4 +24,4 @@ var vals = (object) => {
   return arr;
 };
 
-isAPalendrome("race car");
+isAPalendrome("race cars");
