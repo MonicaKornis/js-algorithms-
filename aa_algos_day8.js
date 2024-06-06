@@ -5,7 +5,7 @@
 //
 // B) Solve this problem in O(n) time, O(n) space.
 //
-// C) Solve this problem in O(n) time, O(1) space.
+// C) Solve this problem in O(n) time, O(1) space
 
 function sumSums(list) {
   let listSum = 0;
