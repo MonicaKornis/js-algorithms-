@@ -14,7 +14,7 @@ function moveZeros(array) {
   return array;
 }
 
-moveZeros([1,2,3,0,0,0,1,0,1,1]);
+moveZeros([1,2,3,0,0,2,1,0,1,1]);
 
 
 var moveZeroes = function(digits) {
