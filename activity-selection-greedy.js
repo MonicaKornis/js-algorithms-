@@ -20,4 +20,4 @@ function activitySelector(startTimes, finishTimes) {
   return taskTimes;
 }
 
-activitySelector([1, 3, 0, 8, 8, 5],[2, 4, 6, 7, 9, 9]);
+activitySelector([1, 3, 0, 8, 7, 5],[2, 4, 6, 7, 9, 9]);
