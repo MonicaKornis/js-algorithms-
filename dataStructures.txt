@@ -6,4 +6,4 @@ Static Arrays - similar to regular arrays but without the push/pop methods. The 
 
 So you have the address of the first index of the static array - we can access any index with the following:
 
-address + (index * 8) - shows us where we have to look in memory - both get and set operations are O(1)
+address + (index * 8) - shows us where we have to look in memory - both get and set operations are O(1).
