@@ -19,8 +19,8 @@ const intersect = (arr1,arr2) => {
   smallerArr.forEach(num => {
     if(largerArr.includes(num)) {
       result.push(num);
-      let i = largerArr.indexOf(num);
-      largerArr.splice(i,1);
+      let idx = largerArr.indexOf(num);
+      largerArr.splice(idx,1);
     }
   });
 
