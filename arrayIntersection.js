@@ -27,7 +27,7 @@ const intersect = (arr1,arr2) => {
   return result;
 };
 
-//slightly faster solution  -
+//slightly faster solution below
 
 const intersect2 = (arr1,arr2)  => {
     let larger = arr1.length >= arr2.length ? arr1 : arr2;
