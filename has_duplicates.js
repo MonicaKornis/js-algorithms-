@@ -1,4 +1,4 @@
-//slow solution
+//slow solution -
 
 var containsDuplicate = function(nums) {
     let seen = [];
