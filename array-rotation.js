@@ -9,7 +9,7 @@ process.stdin.resume();
 //store input
 let input = "";
 process.stdin.on("data", function(data) { //process input
-  input += data; //puts all data into one long string
+  input += data; //puts all data into one long string.
 });
 process.stdin.on("end", function() { //when input ends
   let linesOfInput = input.split("\n"); //split where there is a break
